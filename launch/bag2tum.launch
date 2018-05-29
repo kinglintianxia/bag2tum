@@ -1,0 +1,9 @@
+<!--xml version = "1.0"-->
+<launch>
+    <node name="bag2tum" pkg="bag2tum" type="bag2tum_node" output="screen">
+        <param name="save_folder" value="/home/king/kinect_ws/image/" />
+        <param name="rgb_topic" value="/kinect2/qhd/image_color_rect" />
+        <param name="depth_topic" value="/kinect2/qhd/image_depth_rect" />
+    </node>
+
+</launch>
