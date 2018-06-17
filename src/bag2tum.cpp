@@ -1,5 +1,4 @@
 /**
-* This file is part of ORB-SLAM2.
 * king@2018.05.11
 * desp: rosbag to tum style png file
 */
@@ -29,7 +28,6 @@ public:
     ImageGrabber();
     ~ImageGrabber();
     void run();
-
 private:
     void GrabRGBD(const sensor_msgs::ImageConstPtr& msgRGB,const sensor_msgs::ImageConstPtr& msgD);
 public:
@@ -54,9 +52,9 @@ ImageGrabber::ImageGrabber()
 ImageGrabber::~ImageGrabber()
 {
     //
-    // f1_.close();
-    // f2_.close();
-    // ros::shutdown();
+    f1_.close();
+    f2_.close();
+    ros::shutdown();
 }
 
 void ImageGrabber::run()
